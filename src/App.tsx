@@ -1,12 +1,13 @@
-import './App.css'
+import "./App.css";
 
-function App() { 
-
+function App() {
   return (
     <>
-      <h1 className='text-red-500'>Hello Heros</h1>
+      <h1 className="flex min-h-screen items-center justify-center text-red-500">
+        Hello Heros
+      </h1>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
