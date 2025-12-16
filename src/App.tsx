@@ -1,11 +1,12 @@
 import "./App.css";
+import TeamSync from "./pages/TeamSync/TeamSync";
 
 function App() {
   return (
     <>
-      <h1 className="flex min-h-screen items-center justify-center text-red-500">
-        Hello Heros
-      </h1>
+      <div>
+        <TeamSync />
+      </div>
     </>
   );
 }
