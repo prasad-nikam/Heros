@@ -32,3 +32,7 @@ Now:
 main ✅ stable
 dev ✅ synced
 Ready for next work
+
+
+
+npx prettier --write .

@@ -1,5 +1,5 @@
-import Hero from "./Hero";
-import Navbar from "./Navbar";
+import Hero from "./sections/Hero/Hero";
+import Navbar from "./sections/Navbar";
 import { cn } from "../../lib/utils";
 function TeamSync() {
   return (
