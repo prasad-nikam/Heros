@@ -14,9 +14,9 @@ import HeroRight from "./HeroRight";
 const Hero: React.FC = () => {
   return (
     <div className="h-full w-full">
-      <div className="mx-20 flex mt-20 w-full items-center justify-center">
-        <HeroLeft/>
-        <HeroRight/>
+      <div className="mx-20 mt-20 flex w-full">
+        <HeroLeft />
+        <HeroRight />
       </div>
     </div>
   );
@@ -30,20 +30,22 @@ type PercentageCircleProps = {
   className?: string;
 };
 
-
 export const PercentageCircle: React.FC<PercentageCircleProps> = ({
   percentage,
   arrow,
   className,
 }: PercentageCircleProps) => {
-
-  const color = arrow ==="up"? "bg-green-500/15 text-green-200":"bg-red-500/15 text-red-200";
+  const color =
+    arrow === "up"
+      ? "bg-green-500/15 text-green-200"
+      : "bg-red-500/15 text-red-200";
 
   return (
     <div
       className={cn(
-        "flex h-fit  items-center justify-center rounded-full p-1.5 px-2",
-        "backdrop-blur-[2px]",color,
+        "flex h-fit items-center justify-center rounded-full p-1.5 px-2",
+        "backdrop-blur-[2px]",
+        color,
         className,
       )}
     >
