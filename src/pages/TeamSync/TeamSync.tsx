@@ -9,8 +9,8 @@ function TeamSync() {
           "absolute top-0 right-0 h-2/3 w-2/3",
           "bg-[linear-gradient(to_right,var(--color-neutral-500)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-neutral-500)_1px,transparent_1px)] bg-size-[100px_100px]",
           "to-transparent mask-t-from-50%",
-          "to-transparent mask-b-from-50%",
-          "to-transparent mask-l-from-50%",
+          "to-transparent mask-b-from-30%",
+          "to-transparent mask-l-from-60%",
           "pointer-events-none opacity-20",
         )}
       ></div>

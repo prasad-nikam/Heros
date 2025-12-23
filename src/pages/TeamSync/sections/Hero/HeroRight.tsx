@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 const HeroRight = () => {
   return (
     <>
-      <div className="mt-20 flex flex-1 flex-col items-start">
+      <div className="flex flex-1 flex-col items-start pt-20">
         <div>
           <div className="w-90 font-light text-neutral-100">
             Visualize your team's structure with ease , asigning roles and
@@ -20,6 +20,30 @@ const HeroRight = () => {
           >
             Discover More
           </button>
+        </div>
+        <div
+          className={cn(
+            "relative z-9 mt-25 h-full w-full overflow-hidden rounded-2xl border border-neutral-700",
+          )}
+        >
+          <div className="m-8 text-2xl text-white">
+            Integrate your apps to your workspace
+          </div>
+          <div className="relative z-11 ml-8 h-full w-full overflow-hidden rounded-2xl bg-[#090617]">
+            <div
+              className={cn(
+                "absolute top-0 -left-50 h-50 w-200 -rotate-30 rounded-full",
+                "bg-blur-lg bg-[radial-gradient(var(--color-purple-500)_0%,transparent_60%)] opacity-14",
+              )}
+            ></div>
+          </div>
+          <div
+            className={cn(
+              "absolute inset-0 z-0 bg-[#39325b]",
+              "bg-[linear-gradient(to_right,var(--color-neutral-500)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-neutral-500)_1px,transparent_1px)] bg-size-[90px_90px]",
+              "pointer-events-none opacity-20",
+            )}
+          ></div>
         </div>
       </div>
     </>
