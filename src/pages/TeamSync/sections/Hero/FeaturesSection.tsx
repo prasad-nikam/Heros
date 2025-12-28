@@ -52,7 +52,7 @@ const FeaturesSection = () => {
             Description="Coonect your any app"
             className={cn(
               "bg-green-500/8",
-              "bg-[linear-gradient(125deg,rgb(var(--color-green-400)/0.5)_0%,transparent_80%)]",
+              "bg-[linear-gradient(125deg,rgb(var(--color-green-teamsynccard)/0.5)_0%,transparent_80%)]",
             )}
             logo={<Plus />}
           />
@@ -95,13 +95,13 @@ const Card: React.FC<CardProps> = ({
       <div className="m-6 flex justify-between">
         <motion.div
           whileHover={{
-            rotate: 100,
+            rotate: 360,
           }}
           className="flex size-10 items-center justify-center rounded-full bg-neutral-100/20"
         >
           {logo}
         </motion.div>
-        <EllipsisVertical />
+        <EllipsisVertical className="cursor-pointer" />
       </div>
       <div className="m-8 flex w-3/4 flex-col gap-2 justify-self-center">
         <div className="text-xl font-light text-wrap">{title}</div>

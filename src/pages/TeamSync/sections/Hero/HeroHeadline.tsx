@@ -1,6 +1,6 @@
 import { CircleDashed, Star, ArrowLeftRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { PercentageCircle } from "./Hero";
+import PercentageCircle from "@/components/ui/PercentageCircle";
 
 const HeroHeadline = () => {
   return (

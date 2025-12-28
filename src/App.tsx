@@ -1,4 +1,5 @@
 import "./App.css";
+import Agnce from "./pages/Agnce/Agnce";
 import TeamSync from "./pages/TeamSync/TeamSync";
 
 function App() {
@@ -6,6 +7,8 @@ function App() {
     <>
       <div>
         <TeamSync />
+
+        {/* <Agnce /> */}
       </div>
     </>
   );

@@ -1,5 +1,5 @@
-import React from "react";
 import { cn } from "@/lib/utils";
+import RightBottomWindow from "./RightBottomWindow";
 
 const HeroRight = () => {
   return (
@@ -23,20 +23,13 @@ const HeroRight = () => {
         </div>
         <div
           className={cn(
-            "relative z-9 mt-25 h-full w-full overflow-hidden rounded-2xl border border-neutral-700",
+            "relative z-9 mt-25 h-94 w-full overflow-hidden rounded-2xl border border-neutral-700",
           )}
         >
-          <div className="m-8 text-2xl text-white">
+          <div className="m-8 my-6 text-2xl text-white">
             Integrate your apps to your workspace
           </div>
-          <div className="relative z-11 ml-8 h-full w-full overflow-hidden rounded-2xl bg-[#090617]">
-            <div
-              className={cn(
-                "absolute top-0 -left-50 h-50 w-200 -rotate-30 rounded-full",
-                "bg-blur-lg bg-[radial-gradient(var(--color-purple-500)_0%,transparent_60%)] opacity-14",
-              )}
-            ></div>
-          </div>
+          <RightBottomWindow />
           <div
             className={cn(
               "absolute inset-0 z-0 bg-[#39325b]",
