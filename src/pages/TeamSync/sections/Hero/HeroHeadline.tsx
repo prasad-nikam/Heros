@@ -40,7 +40,7 @@ const HeroHeadline = () => {
         <div
           className={cn(
             "mr-4 flex h-full w-40 items-center justify-end rounded-xl border border-neutral-800",
-            "bg-[linear-gradient(165deg,transparent_0%,var(--color-purple-200)_450%)]",
+            "bg-[linear-gradient(165deg,transparent_0%,var(--color-purple-400)_450%)]",
           )}
         >
           <div

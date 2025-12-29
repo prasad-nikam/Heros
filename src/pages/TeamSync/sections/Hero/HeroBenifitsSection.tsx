@@ -14,7 +14,7 @@ const HeroBenifitsSection = () => {
           <div
             className={cn(
               "flex h-48 w-full flex-col justify-between rounded-xl border border-neutral-500 p-4 font-light",
-              "bg-[radial-gradient(transparent_0%,var(--color-purple-200)_400%)]",
+              "bg-purple-200/20 shadow-[inset_0_0_50px_rgba(256,256,256,0.4)]",
             )}
           >
             <div className="text-sx text-wrap">

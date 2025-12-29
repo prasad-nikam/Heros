@@ -60,8 +60,8 @@ const FeaturesSection = () => {
 
         <div
           className={cn(
-            "absolute -top-20 -left-250 h-70 w-400 -rotate-45 rounded-full",
-            "backdrop-blur-10xl bg-[radial-gradient(var(--color-purple-400)_0%,transparent_60%)] opacity-40",
+            "absolute top-10 -left-60 h-50 w-150 -rotate-45 rounded-full",
+            "backdrop-blur-10xl bg-[radial-gradient(var(--color-purple-500)_0%,transparent_60%)] opacity-25",
           )}
         ></div>
       </div>
@@ -97,7 +97,7 @@ const Card: React.FC<CardProps> = ({
           whileHover={{
             rotate: 360,
           }}
-          className="flex size-10 items-center justify-center rounded-full bg-neutral-100/20"
+          className="z-999 flex size-10 items-center justify-center rounded-full bg-neutral-100/20"
         >
           {logo}
         </motion.div>

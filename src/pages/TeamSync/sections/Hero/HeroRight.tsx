@@ -13,9 +13,9 @@ const HeroRight = () => {
           </div>
           <button
             className={cn(
-              "mt-2 cursor-pointer rounded-full border-x border-purple-200 px-6 py-3 font-light text-neutral-100",
-              "bg-[radial-gradient(transparent_0%,var(--color-purple-200)_150%)]",
-              "hover:bg-[radial-gradient(transparent_0%,var(--color-purple-200)_100%)]",
+              "mt-2 cursor-pointer rounded-full px-6 py-3 font-light text-neutral-100",
+              "bg-neutral-100/10 hover:bg-neutral-100/20",
+              "shadow-[inset_0_0_30px_rgba(256,256,256,0.4)]",
             )}
           >
             Discover More

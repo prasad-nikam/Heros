@@ -16,20 +16,20 @@ function TeamSync() {
       ></div>
       <div
         className={cn(
-          "absolute top-50 -left-50 h-70 w-200 -rotate-20 rounded-full",
-          "bg-blur-lg bg-[radial-gradient(var(--color-purple-400)_0%,transparent_60%)] opacity-14",
+          "absolute top-20 -left-40 h-70 w-200 -rotate-20 rounded-full",
+          "bg-blur-lg bg-[radial-gradient(var(--color-purple-400)_-10%,transparent_50%)] opacity-20",
         )}
       ></div>
       <div
         className={cn(
           "absolute top-0 -right-190 h-40 w-400 -rotate-70 rounded-full",
-          "bg-[radial-gradient(var(--color-purple-100)_0%,transparent_60%)] opacity-14",
+          "bg-[radial-gradient(var(--color-purple-200)_0%,transparent_60%)] opacity-14",
         )}
       ></div>
       <div
         className={cn(
           "absolute top-0 -right-60 h-40 w-200 -rotate-40 rounded-full",
-          "bg-[radial-gradient(var(--color-purple-100)_0%,transparent_60%)] opacity-14",
+          "bg-[radial-gradient(var(--color-purple-200)_0%,transparent_60%)] opacity-14",
         )}
       ></div>
 
