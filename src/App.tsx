@@ -1,14 +1,15 @@
 import "./App.css";
 import Agnce from "./pages/Agnce/Agnce";
+import Paymark from "./pages/Paymark/Paymark";
 import TeamSync from "./pages/TeamSync/TeamSync";
 
 function App() {
   return (
     <>
       <div>
-        <TeamSync />
-
+        {/* <TeamSync /> */}
         {/* <Agnce /> */}
+        <Paymark />
       </div>
     </>
   );
