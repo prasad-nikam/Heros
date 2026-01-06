@@ -18,7 +18,7 @@ const Navbar = () => {
           <ShoppingCart />
         </button>
         <button>Login</button>
-        <button className="h-12 rounded-full bg-neutral-100 px-4 text-neutral-800">
+        <button className="h-12 rounded-full bg-neutral-100 px-4 text-neutral-800 hover:bg-neutral-400 cursor-pointer">
           Open Account
         </button>
       </div>

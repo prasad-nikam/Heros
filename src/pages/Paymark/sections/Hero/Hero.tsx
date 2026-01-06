@@ -1,6 +1,8 @@
+import InvestmentCard from "./InvestmentCard";
+
 const Hero = () => {
   return (
-    <div className="relative z-10 mt-20">
+    <div className="relative z-10 mt-20 selection:bg-white selection:text-black">
       <div className="flex flex-col items-center justify-center text-white">
         <div className="tracking-tighter md:text-6xl">Explore the reality</div>
         <div className="tracking-tighter md:text-6xl">
@@ -24,6 +26,14 @@ const Hero = () => {
           <button className="h-full cursor-pointer rounded-full bg-neutral-200 px-8 text-black hover:bg-neutral-400">
             Send code
           </button>
+
+        </div>
+        <div className="h-100 w-full flex justify-between items-end">
+          <div className="w-100 h-36 rounded-3xl"></div>
+          <div className="relative w-120 h-70 rounded-3xl"> <InvestmentCard /> </div>
+          <div className="w-100 h-50 rounded-3xl"></div>
+          <div className="w-100 h-36 rounded-3xl"></div>
+          <div></div>
         </div>
       </div>
     </div>
