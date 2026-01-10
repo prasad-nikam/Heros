@@ -1,20 +1,29 @@
 import MultiLineChart from "@/components/ui/MultiLineChart";
+import BalanceCard from "./BalanceCard";
 
 const InvestmentCard = () => {
-  const data = [
+  const InvestmentData = [
     { label: "Sales", color: "#22c55e", points: [10, 30, 25, 40, 35] },
     { label: "Revenue", color: "#3b82f6", points: [20, 25, 30, 28, 45] },
     { label: "Users", color: "#a855f7", points: [5, 15, 20, 22, 30] },
   ];
+
+  const BalanceData = [
+    { key: "sun", value: 3 },
+    { key: "mon", value: 5 },
+    { key: "tue", value: 2, color: "var(--color-red-500)" },
+    { key: "wed", value: 4 },
+    { key: "thu", value: 3 },
+    { key: "fri", value: 7, color: "var(--color-green-500)" },
+    { key: "sat", value: 3 }
+  ];
+
   return (
-    <div className="relative flex flex-col justify-between h-full w-full rounded-3xl bg-transparent border border-neutral-700 p-6 pb-12"> 
-        <div className="text-4xl">$521K</div>
-        <div className="text-xs text-neutral-400 ">Your Investment is Growing</div>
-        <MultiLineChart data={data} height={120} smooth={true} width={400} padding={0}/>
-        
-        <div className="absolute size-40 bg-neutral-950 rounded-3xl -top-36 -left-20">
-          
-        </div>
+    <div className="relative flex flex-col justify-between h-full w-full rounded-3xl bg-transparent border border-neutral-700 p-6 pb-12">
+      <div className="text-4xl">$521K</div>
+      <div className="text-xs text-neutral-400 ">Your Investment is Growing</div>
+      <MultiLineChart data={InvestmentData} height={120} smooth={true} width={400} padding={0} />
+      <BalanceCard arr={BalanceData} />
     </div>
   );
 };
