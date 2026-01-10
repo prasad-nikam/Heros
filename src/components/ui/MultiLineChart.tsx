@@ -46,28 +46,28 @@ export default function MultiLineChart({
 
 
   const createSmoothPath = (points: number[]) => {
-  return points.reduce((path, point, i, arr) => {
-    const x = scaleX(i, arr.length);
-    const y = scaleY(point);
+    return points.reduce((path, point, i, arr) => {
+      const x = scaleX(i, arr.length);
+      const y = scaleY(point);
 
-    if (i === 0) {
-      return `M ${x} ${y}`;
-    }
+      if (i === 0) {
+        return `M ${x} ${y}`;
+      }
 
-    const prevX = scaleX(i - 1, arr.length);
-    const prevY = scaleY(arr[i - 1]);
+      const prevX = scaleX(i - 1, arr.length);
+      const prevY = scaleY(arr[i - 1]);
 
-    const controlX = (prevX + x) / 2;
+      const controlX = (prevX + x) / 2;
 
-    return (
-      path +
-      ` C ${controlX} ${prevY}, ${controlX} ${y}, ${x} ${y}`
-    );
-  }, "");
-};
+      return (
+        path +
+        ` C ${controlX} ${prevY}, ${controlX} ${y}, ${x} ${y}`
+      );
+    }, "");
+  };
 
   return (
-    <div className="w-full overflow-x-auto">
+    <div className="w-full">
       <svg
         viewBox={`0 0 ${width} ${height}`}
         className="bg-transparent rounded-lg w-full h-full"
@@ -95,6 +95,19 @@ export default function MultiLineChart({
           />
         ))}
       </svg>
+      <div className="text-xs flex justify-between">
+        {data.map((line) => {
+          return (
+            <div className="flex flex-row justify-between items-center gap-2 px-2">
+              <div className={`size-3 rounded-full`} style={{ backgroundColor: line.color }}></div>
+              <div> {line.label}: </div>
+              <div>{line.points[line.points.length - 1]}%</div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
+
+

@@ -5,6 +5,6 @@
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   }
 }
