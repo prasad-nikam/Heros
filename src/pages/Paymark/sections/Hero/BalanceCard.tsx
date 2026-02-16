@@ -12,8 +12,8 @@ const BalanceCard: React.FC<BalanceCardProps> = ({ arr }: BalanceCardProps) => {
     return (
         <div className="absolute size-48 bg-neutral-800/80 border border-neutral-700 rounded-4xl -top-45 -left-22">
             <div className="relative flex flex-col justify-between h-full w-full p-4">
-                <div className="text-xs text-neutral-500">Your Balance</div>
-                <div className="text-2xl text-neutral-100 font-bold">$15,037</div>
+                <div className="text-xs pl-1 pt-1 text-neutral-500">Your Balance</div>
+                <div className="text-2xl pl-1 pt-1 text-neutral-100 font-bold">$15,037</div>
                 <div className="flex h-24 justify-between">
                     {arr.map((i, idx) => (
                         <div key={idx} className="h-full flex flex-col items-center justify-end gap-1">
