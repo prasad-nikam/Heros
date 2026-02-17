@@ -6,7 +6,7 @@ const Paymark = () => {
   return (
     <div
       className={cn(
-        "relative flex min-h-screen w-full flex-col items-center pt-16 md:pt-2 lg:h-screen",
+        "relative flex min-h-screen w-full flex-col items-center pt-16 pb-1 md:pt-2 lg:h-screen",
         "z-0 overflow-hidden bg-neutral-900",
       )}
     >

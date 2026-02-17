@@ -5,7 +5,7 @@ import TransactionSummary from "./TransactionSummary";
 
 const Hero = () => {
   return (
-    <div className="relative z-10 h-full px-4 pt-8 selection:bg-white selection:text-black sm:pt-16">
+    <div className="relative z-10 h-full px-4 pt-8 selection:bg-white selection:text-black sm:pt-32">
       <div className="flex h-full flex-col items-center justify-between text-center text-white">
         <div className="flex flex-col items-center">
           <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-6xl">
@@ -30,7 +30,7 @@ const Hero = () => {
               placeholder="Enter Your Email"
               className="h-12 w-full rounded-full bg-neutral-100/10 px-6 placeholder:text-neutral-300 focus:outline-none sm:bg-transparent"
             />
-            <button className="h-12 w-fit rounded-full bg-neutral-200 px-6 text-black transition hover:bg-neutral-400 sm:w-auto">
+            <button className="h-12 w-40  rounded-full bg-neutral-200 px-6 text-black transition hover:bg-neutral-400">
               Send code
             </button>
           </div>

@@ -91,7 +91,7 @@ export default function MultiLineChart({
           />
         ))}
       </svg>
-      <div className="flex justify-between text-xs">
+      <div className="flex justify-between text-xs pt-2">
         {data.map((line) => {
           return (
             <div className="flex flex-row items-center justify-between gap-2 px-2">
