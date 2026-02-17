@@ -15,15 +15,21 @@ const InvestmentCard = () => {
     { key: "wed", value: 4 },
     { key: "thu", value: 3 },
     { key: "fri", value: 7, color: "var(--color-green-500)" },
-    { key: "sat", value: 3 }
+    { key: "sat", value: 3 },
   ];
 
   return (
-    <div className="relative flex flex-col justify-between items-center gap-2 h-fit lg:h-full w-full rounded-3xl bg-transparent border border-neutral-800 p-6 lg:pb-12">
+    <div className="relative flex h-fit w-full flex-col items-center justify-between gap-2 rounded-3xl border border-neutral-800 bg-transparent p-6 lg:h-full lg:pb-12">
       <BalanceCard arr={BalanceData} />
       <div className="text-4xl">$521K</div>
-      <div className="text-xs text-neutral-400 ">Your Investment is Growing</div>
-      <MultiLineChart data={InvestmentData} height={120} smooth={true} width={400} padding={0} />
+      <div className="text-xs text-neutral-400">Your Investment is Growing</div>
+      <MultiLineChart
+        data={InvestmentData}
+        height={120}
+        smooth={true}
+        width={400}
+        padding={0}
+      />
     </div>
   );
 };

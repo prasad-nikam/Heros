@@ -23,7 +23,7 @@ export default function MultiLineChart({
 }: MultiLineChartProps) {
   if (!data.length) return null;
 
-  const allValues = data.flatMap(d => d.points);
+  const allValues = data.flatMap((d) => d.points);
   const maxY = Math.max(...allValues);
   const minY = Math.min(...allValues);
 
@@ -44,7 +44,6 @@ export default function MultiLineChart({
       })
       .join(" ");
 
-
   const createSmoothPath = (points: number[]) => {
     return points.reduce((path, point, i, arr) => {
       const x = scaleX(i, arr.length);
@@ -59,10 +58,7 @@ export default function MultiLineChart({
 
       const controlX = (prevX + x) / 2;
 
-      return (
-        path +
-        ` C ${controlX} ${prevY}, ${controlX} ${y}, ${x} ${y}`
-      );
+      return path + ` C ${controlX} ${prevY}, ${controlX} ${y}, ${x} ${y}`;
     }, "");
   };
 
@@ -70,7 +66,7 @@ export default function MultiLineChart({
     <div className="w-full">
       <svg
         viewBox={`0 0 ${width} ${height}`}
-        className="bg-transparent rounded-lg w-full h-full"
+        className="h-full w-full rounded-lg bg-transparent"
       >
         {/* X-axis */}
         <line
@@ -95,11 +91,14 @@ export default function MultiLineChart({
           />
         ))}
       </svg>
-      <div className="text-xs flex justify-between">
+      <div className="flex justify-between text-xs">
         {data.map((line) => {
           return (
-            <div className="flex flex-row justify-between items-center gap-2 px-2">
-              <div className={`size-3 rounded-full`} style={{ backgroundColor: line.color }}></div>
+            <div className="flex flex-row items-center justify-between gap-2 px-2">
+              <div
+                className={`size-3 rounded-full`}
+                style={{ backgroundColor: line.color }}
+              ></div>
               <div> {line.label}: </div>
               <div>{line.points[line.points.length - 1]}%</div>
             </div>
@@ -109,5 +108,3 @@ export default function MultiLineChart({
     </div>
   );
 }
-
-

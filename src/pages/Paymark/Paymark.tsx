@@ -6,12 +6,12 @@ const Paymark = () => {
   return (
     <div
       className={cn(
-        "relative min-h-screen lg:h-screen w-full pt-16 md:pt-2 flex flex-col items-center",
+        "relative flex min-h-screen w-full flex-col items-center pt-16 md:pt-2 lg:h-screen",
         "z-0 overflow-hidden bg-neutral-900",
       )}
     >
       <Navbar />
-      <div className="flex-1 h-full">
+      <div className="h-full flex-1">
         <Hero />
       </div>
 
