@@ -1,17 +1,54 @@
-import "./App.css";
-import Agnce from "./pages/Agnce/Agnce";
-import Paymark from "./pages/Paymark/Paymark";
-import TeamSync from "./pages/TeamSync/TeamSync";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import { motion, AnimatePresence } from "motion/react";
+
+const Home = lazy(() => import("./pages/Home/Home"));
+const Agnce = lazy(() => import("./pages/Agnce/Agnce"));
+const Paymark = lazy(() => import("./pages/Paymark/Paymark"));
+const TeamSync = lazy(() => import("./pages/TeamSync/TeamSync"));
+
+function AnimatedRoutes() {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Home />} />
+        <Route path="/agnce" element={<PageWrapper><Agnce /></PageWrapper>} />
+        <Route path="/paymark" element={<PageWrapper><Paymark /></PageWrapper>} />
+        <Route path="/teamsync" element={<PageWrapper><TeamSync /></PageWrapper>} />
+      </Routes>
+    </AnimatePresence>
+  );
+}
+
+function PageWrapper({ children }: { children: React.ReactNode }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: -30 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -30 }}
+      transition={{ duration: 0.4 }}
+      className="min-h-screen bg-neutral-950 text-white"
+    >
+      {children}
+    </motion.div>
+  );
+}
 
 function App() {
   return (
-    <>
-      <div>
-        {/* <TeamSync /> */}
-        {/* <Agnce /> */}
-        <Paymark />
-      </div>
-    </>
+    <BrowserRouter>
+      <Suspense
+        fallback={
+          <div className="flex items-center justify-center min-h-screen bg-neutral-950 text-white">
+            Loading...
+          </div>
+        }
+      >
+        <AnimatedRoutes />
+      </Suspense>
+    </BrowserRouter>
   );
 }
 
