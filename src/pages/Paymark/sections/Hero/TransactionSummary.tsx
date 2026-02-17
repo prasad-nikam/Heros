@@ -2,7 +2,7 @@ import PaymentCard from "./PaymentCard"
 
 const TransactionSummary = () => {
     return (
-        <div className="relative w-100 h-60 p-4 rounded-3xl flex flex-col items-center justify-around border border-neutral-800 text-sm gap-2">
+        <div className="relative w-100 lg:h-60 p-4 rounded-3xl flex flex-col items-center justify-around border border-neutral-800 text-sm gap-2">
             <div className="w-full">
                 <div className="text-sm pb-2">
                     Sent
@@ -37,7 +37,7 @@ const TransactionSummary = () => {
                 </div>
 
             </div>
-            <div className="absolute -top-62 -right-40 bg-neutral-900 rounded-3xl">
+            <div className="lg:absolute lg:-top-62 lg:-right-40 bg-neutral-900 rounded-3xl">
                 <PaymentCard />
             </div>
         </div>

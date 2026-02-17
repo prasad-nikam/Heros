@@ -8,9 +8,8 @@ type BalanceCardProps = {
 const BalanceCard: React.FC<BalanceCardProps> = ({ arr }: BalanceCardProps) => {
     const heighest = Math.max(...arr.map(i => i.value));
     const height = arr.map(i => (i.value * 100) / heighest);
-    console.log(`${height[5]}%`);
     return (
-        <div className="absolute size-48 bg-neutral-800/80 border border-neutral-700 rounded-4xl -top-45 -left-22">
+        <div className="size-48 relative lg:absolute lg:-top-45 lg:-left-22 bg-neutral-800/80 border border-neutral-700 rounded-4xl">
             <div className="relative flex flex-col justify-between h-full w-full p-4">
                 <div className="text-xs pl-1 pt-1 text-neutral-500">Your Balance</div>
                 <div className="text-2xl pl-1 pt-1 text-neutral-100 font-bold">$15,037</div>

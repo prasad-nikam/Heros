@@ -19,11 +19,11 @@ const InvestmentCard = () => {
   ];
 
   return (
-    <div className="relative flex flex-col justify-between h-full w-full rounded-3xl bg-transparent border border-neutral-700 p-6 pb-12">
+    <div className="relative flex flex-col justify-between items-center gap-2 h-fit lg:h-full w-full rounded-3xl bg-transparent border border-neutral-800 p-6 lg:pb-12">
+      <BalanceCard arr={BalanceData} />
       <div className="text-4xl">$521K</div>
       <div className="text-xs text-neutral-400 ">Your Investment is Growing</div>
       <MultiLineChart data={InvestmentData} height={120} smooth={true} width={400} padding={0} />
-      <BalanceCard arr={BalanceData} />
     </div>
   );
 };
