@@ -22,7 +22,9 @@ const Hero = () => {
           Learn More
         </button>
       </div>
-      <div className="z-9 flex flex-col items-center justify-center gap-4 pt-6 lg:flex-row lg:items-end">
+
+      {/* to add floating elememnts */}
+      <div className="relative z-9 flex flex-col items-center justify-center gap-4 pt-6 lg:flex-row lg:items-end">
         <div className="order-2 flex w-75 flex-col justify-between gap-4 lg:order-1">
           <div className="w-full rounded-2xl bg-white p-4 py-2 shadow-md/5">
             <div className="flex items-center justify-between pb-2">
