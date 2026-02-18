@@ -5,7 +5,7 @@ import { useState } from "react";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="relative flex h-20 w-full items-center justify-between rounded-2xl border border-neutral-200 bg-white">
+    <div className="relative flex h-16 w-full items-center justify-between rounded-2xl border border-neutral-200 bg-white">
       <div className="pl-6 text-2xl font-semibold">Ezcard</div>
       <div className="hidden items-center gap-6 md:flex">
         <div>Home</div>
@@ -15,7 +15,7 @@ const Navbar = () => {
         <div>Customers</div>
       </div>
       <div className="hidden pr-6 md:flex">
-        <button className="rounded-full bg-blue-700 px-4 py-2 text-white">
+        <button className="cursor-pointer rounded-full bg-blue-700 px-4 py-2 text-white hover:bg-blue-600">
           Try Now
         </button>
       </div>
