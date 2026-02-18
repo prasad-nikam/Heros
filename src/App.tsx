@@ -6,6 +6,7 @@ const Home = lazy(() => import("./pages/Home/Home"));
 const Agnce = lazy(() => import("./pages/Agnce/Agnce"));
 const Paymark = lazy(() => import("./pages/Paymark/Paymark"));
 const TeamSync = lazy(() => import("./pages/TeamSync/TeamSync"));
+const Ezcard = lazy(() => import("./pages/Ezcard/Ezcard"));
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -14,9 +15,38 @@ function AnimatedRoutes() {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
-        <Route path="/agnce" element={<PageWrapper><Agnce /></PageWrapper>} />
-        <Route path="/paymark" element={<PageWrapper><Paymark /></PageWrapper>} />
-        <Route path="/teamsync" element={<PageWrapper><TeamSync /></PageWrapper>} />
+        <Route
+          path="/agnce"
+          element={
+            <PageWrapper>
+              <Agnce />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/paymark"
+          element={
+            <PageWrapper>
+              <Paymark />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/teamsync"
+          element={
+            <PageWrapper>
+              <TeamSync />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/ezcard"
+          element={
+            <PageWrapper>
+              <Ezcard />
+            </PageWrapper>
+          }
+        />
       </Routes>
     </AnimatePresence>
   );
@@ -41,7 +71,7 @@ function App() {
     <BrowserRouter>
       <Suspense
         fallback={
-          <div className="flex items-center justify-center min-h-screen bg-neutral-950 text-white">
+          <div className="flex min-h-screen items-center justify-center bg-neutral-950 text-white">
             Loading...
           </div>
         }

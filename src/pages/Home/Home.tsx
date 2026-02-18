@@ -4,6 +4,7 @@ const heroes = [
     { name: "Agnce", path: "/agnce" },
     { name: "Paymark", path: "/paymark" },
     { name: "TeamSync", path: "/teamsync" },
+    { name: "EzCard", path: "ezcard" },
 ];
 
 function Home() {
