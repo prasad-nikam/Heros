@@ -1,9 +1,26 @@
 import { Menu, X } from "lucide-react";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
+  const containerVarients = {
+    hidden: { height: 0, opacity: 0 },
+    visible: {
+      height: "auto",
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.03,
+        duration: 0.3,
+      },
+    },
+  };
+
+  const itemVarients = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0 },
+  };
   return (
     <div className="relative flex h-16 w-full items-center justify-between rounded-2xl border border-neutral-200 bg-white">
       <div className="pl-6 text-2xl font-semibold">Ezcard</div>
@@ -25,21 +42,57 @@ const Navbar = () => {
       >
         {open ? <X /> : <Menu />}
       </button>
-      {open && (
-        <motion.div
-          initial={{ y: -10 }}
-          animate={{ y: 0 }}
-          className="absolute top-full flex w-full flex-col gap-2 rounded-b-2xl bg-neutral-900/10 p-4 py-2 text-black"
-        >
-          <button className="rounded-xl bg-white py-2">Home</button>
-          <button className="rounded-xl bg-white py-2">About</button>
-          <button className="rounded-xl bg-white py-2">Products</button>
-          <button className="rounded-xl bg-white py-2">Help</button>
-          <button className="rounded-xl bg-white py-2">Customers</button>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            layout
+            variants={containerVarients}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            transition={{ duration: 0.3 }}
+            className="absolute top-full flex w-full flex-col gap-2 overflow-hidden rounded-b-2xl bg-neutral-200 p-4 py-2 text-black"
+          >
+            <motion.button
+              variants={itemVarients}
+              className="rounded-xl bg-white py-2"
+            >
+              Home
+            </motion.button>
+            <motion.button
+              variants={itemVarients}
+              className="rounded-xl bg-white py-2"
+            >
+              About
+            </motion.button>
+            <motion.button
+              variants={itemVarients}
+              className="rounded-xl bg-white py-2"
+            >
+              Products
+            </motion.button>
+            <motion.button
+              variants={itemVarients}
+              className="rounded-xl bg-white py-2"
+            >
+              Help
+            </motion.button>
+            <motion.button
+              variants={itemVarients}
+              className="rounded-xl bg-white py-2"
+            >
+              Customers
+            </motion.button>
 
-          <button className="rounded-xl bg-blue-600 px-4 py-2">Try Now</button>
-        </motion.div>
-      )}
+            <motion.button
+              variants={itemVarients}
+              className="rounded-xl bg-blue-600 px-4 py-2"
+            >
+              Try Now
+            </motion.button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
