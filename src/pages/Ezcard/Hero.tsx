@@ -1,13 +1,22 @@
 import { cn } from "@/lib/utils";
 import { ArrowDown, ArrowUp, BadgeCheck } from "lucide-react";
 import girlSvg from "./girl-svgrepo-com.svg";
+import { motion } from "motion/react";
 const Hero = () => {
   return (
     <div className="flex flex-col items-center justify-start">
       <div className="flex flex-col items-center justify-center pt-6 text-4xl font-medium tracking-wide text-black md:text-6xl md:leading-18">
-        <div>
-          Eazy. <span>Rewarding.</span>
-        </div>
+        <motion.div
+          initial={{ y: -30 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="overflow-hidden"
+        >
+          Eazy.{" "}
+          <span className="bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text font-bold text-transparent">
+            Rewarding.
+          </span>
+        </motion.div>
         <div>Build for you.</div>
       </div>
       <div className="h-fit pt-4 text-center font-light tracking-wide text-neutral-600 md:w-120 md:text-lg">
@@ -57,7 +66,7 @@ const Hero = () => {
         <div
           className={cn(
             "relative order-1 h-90 w-58 overflow-hidden rounded-3xl lg:order-2",
-            "bg-linear-to-tr from-[#EC9482] from-10% via-purple-600 via-70% to-[#3C3FF3]"
+            "bg-linear-to-tr from-[#EC9482] from-10% via-purple-600 via-70% to-[#3C3FF3]",
           )}
         >
           <div className="flex h-full w-full flex-col justify-between rounded-3xl p-6 text-white">

@@ -1,4 +1,4 @@
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 
@@ -12,6 +12,7 @@ const Navbar = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.03,
+        delayChildren: 0.1,
         duration: 0.3,
       },
     },
@@ -24,10 +25,12 @@ const Navbar = () => {
   return (
     <div className="relative flex h-16 w-full items-center justify-between rounded-2xl border border-neutral-200 bg-white">
       <div className="pl-6 text-2xl font-semibold">Ezcard</div>
-      <div className="hidden items-center gap-6 md:flex">
+      <div className="hidden cursor-pointer items-center gap-6 text-sm md:flex">
         <div>Home</div>
         <div>About</div>
-        <div>Products</div>
+        <div className="group flex items-center gap-2">
+          Products <ChevronDown className="size-4 group-hover:rotate-180" />
+        </div>
         <div>Help</div>
         <div>Customers</div>
       </div>
