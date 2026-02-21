@@ -7,6 +7,7 @@ const Agnce = lazy(() => import("./pages/Agnce/Agnce"));
 const Paymark = lazy(() => import("./pages/Paymark/Paymark"));
 const TeamSync = lazy(() => import("./pages/TeamSync/TeamSync"));
 const Ezcard = lazy(() => import("./pages/Ezcard/Ezcard"));
+const TrustLine = lazy(() => import("./pages/TrustLine/TrustLine"));
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -47,6 +48,14 @@ function AnimatedRoutes() {
             </PageWrapper>
           }
         />
+        <Route
+          path="/trustline"
+          element={
+            <PageWrapper>
+              <TrustLine />
+            </PageWrapper>
+          }
+        />
       </Routes>
     </AnimatePresence>
   );
@@ -55,11 +64,11 @@ function AnimatedRoutes() {
 function PageWrapper({ children }: { children: React.ReactNode }) {
   return (
     <motion.div
-    // initial={{ opacity: 0, y: -30 }}
-    // animate={{ opacity: 1, y: 0 }}
-    // exit={{ opacity: 0, y: -30 }}
-    // transition={{ duration: 0.4 }}
-    // className="min-h-screen bg-neutral-950 text-white"
+      // initial={{ opacity: 0, y: -30 }}
+      // animate={{ opacity: 1, y: 0 }}
+      // exit={{ opacity: 0, y: -30 }}
+      // transition={{ duration: 10 }}
+      className="min-h-screen bg-neutral-950 text-white"
     >
       {children}
     </motion.div>
