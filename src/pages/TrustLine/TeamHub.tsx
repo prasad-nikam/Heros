@@ -10,11 +10,11 @@ type Node = {
 };
 
 const defaultNodes: Node[] = [
-  { id: "team1", label: "Team 1", x: 22, y: 20 },
-  { id: "team3", label: "Team 3", x: 78, y: 20 },
+  { id: "team1", label: "Team 1", x: 20, y: 20 },
+  { id: "team3", label: "Team 3", x: 80, y: 20 },
   { id: "ai", label: "AI", x: 12, y: 62 },
   { id: "brain", label: "Brain", x: 88, y: 62 },
-  { id: "team2", label: "Team 2", x: 50, y: 80 },
+  { id: "team2", label: "Team 2", x: 50, y: 83 },
 ];
 
 export default function TeamHub({ nodes = defaultNodes }: { nodes?: Node[] }) {
@@ -33,7 +33,7 @@ export default function TeamHub({ nodes = defaultNodes }: { nodes?: Node[] }) {
             <line
               key={n.id}
               x1={50}
-              y1={45}
+              y1={40}
               x2={n.x}
               y2={n.y}
               stroke="#c7d2fe"
@@ -47,11 +47,11 @@ export default function TeamHub({ nodes = defaultNodes }: { nodes?: Node[] }) {
         {/* central box */}
         <motion.div
           initial={{ scale: 0.98, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1, y: -10 }}
+          animate={{ scale: 1, opacity: 1, y: -25 }}
           transition={{ duration: 0.45 }}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
         >
-          <div className="flex size-10 items-center justify-center rounded-full bg-white shadow-[0_8px_20px_rgba(99,102,241,0.12)]">
+          <div className="flex size-10 items-center justify-center rounded-full bg-white shadow-[0_8px_20px_var(--color-amber-200)]">
             <CircleUser className="size-7 text-amber-400" />
           </div>
         </motion.div>
@@ -63,7 +63,7 @@ export default function TeamHub({ nodes = defaultNodes }: { nodes?: Node[] }) {
             className="absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center"
             style={{ left: `${n.x}%`, top: `${n.y}%` }}
           >
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-neutral-200 bg-white">
               {/* avatar or icon */}
               {n.img ? (
                 // eslint-disable-next-line @next/next/no-img-element
