@@ -26,13 +26,13 @@ const Navbar = () => {
     <div className="relative flex h-16 w-full items-center justify-between rounded-2xl border border-neutral-200 bg-white">
       <div className="pl-6 text-2xl font-semibold">Ezcard</div>
       <div className="hidden cursor-pointer items-center gap-6 text-sm md:flex">
-        <div>Home</div>
-        <div>About</div>
-        <div className="group flex items-center gap-2">
+        <div className="hover:text-neutral-500">Home</div>
+        <div className="hover:text-neutral-500">About</div>
+        <div className="group flex items-center gap-2 hover:text-neutral-500">
           Products <ChevronDown className="size-4 group-hover:rotate-180" />
         </div>
-        <div>Help</div>
-        <div>Customers</div>
+        <div className="hover:text-neutral-500">Help</div>
+        <div className="hover:text-neutral-500">Customers</div>
       </div>
       <div className="hidden pr-6 md:flex">
         <button className="cursor-pointer rounded-full bg-blue-700 px-4 py-2 text-white hover:bg-blue-600">

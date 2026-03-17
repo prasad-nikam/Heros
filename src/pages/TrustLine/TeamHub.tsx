@@ -73,7 +73,7 @@ export default function TeamHub({ nodes = defaultNodes }: { nodes?: Node[] }) {
                   className="h-12 w-12 rounded-full object-cover"
                 />
               ) : (
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-50 text-sm font-medium text-gray-700">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 text-xs font-medium text-gray-700">
                   {n.label
                     .split(" ")
                     .slice(0, 2)
