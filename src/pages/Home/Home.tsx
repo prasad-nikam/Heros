@@ -4,6 +4,7 @@ import PaymarkImg from "./assets/Paymark.png";
 import TeamsyncImg from "./assets/Teamsync.png";
 import EzcardImg from "./assets/Ezcard.png";
 import TrustLineImg from "./assets/TrustLine.png";
+import { Analytics } from "@vercel/analytics/react";
 
 const heroes = [
   { name: "TrustLine", path: "/trustline", img: TrustLineImg },
@@ -43,6 +44,7 @@ function Home() {
           </Link>
         ))}
       </div>
+      <Analytics />
     </div>
   );
 }
